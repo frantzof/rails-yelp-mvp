@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   post "restaurants", to: "restaurants#create"
 
   resources :restaurants do
-    resources :reviews, only: [ :new, :create ]
+    resources :reviews, only: [ :create ]
   end
-  resources :reviews, only: [ :show, :edit, :update, :destroy ]
+
 end
 
